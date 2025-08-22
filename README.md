@@ -2,13 +2,14 @@
 
 ## About
 ### Tech Stack
-TODO
+- nodejs
 ## Getting Started
 ### Prerequisites
-TODO
+- nvm
+- npm
 ### Install Dependencies
-TODO
+`npm install`
 ### Run Tests
-TODO
+`npm test`
 ### Run Locally
-TODO
+`npm start`

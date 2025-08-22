@@ -1,0 +1,22 @@
+{
+  "name": "aim-api-test-automation-coding-challenge",
+  "version": "0.0.0",
+  "description": "AIM API Test Automation Challenge",
+  "main": "app.ts",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "node --test test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edieliao/aim-api-test-automation-coding-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edieliao/aim-api-test-automation-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/edieliao/aim-api-test-automation-coding-challenge#readme",
+  "devDependencies": {
+  }
+}
