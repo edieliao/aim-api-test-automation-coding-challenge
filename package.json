@@ -17,6 +17,7 @@
     "url": "https://github.com/edieliao/aim-api-test-automation-coding-challenge/issues"
   },
   "homepage": "https://github.com/edieliao/aim-api-test-automation-coding-challenge#readme",
-  "devDependencies": {
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
