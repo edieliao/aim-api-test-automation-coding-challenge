@@ -2,7 +2,14 @@
 
 ## About
 ### Tech Stack
+#### App
 - nodejs
+- Express
+#### Test
+- mocha
+- chai
+- chai-http
+#### Test
 ## Getting Started
 ### Prerequisites
 - nvm
