@@ -30,7 +30,7 @@ app.get('/api/skus/:id', (req, res) => {
     res.status(sku ? StatusCodes.OK : StatusCodes.NOT_FOUND).json(sku);
 });
 
-app.put('/api/skus/:id', (req, res) => {
+app.post('/api/skus/:id', (req, res) => {
     const newSku = new Sku({
         id: req.params.id,
         ...req.body
