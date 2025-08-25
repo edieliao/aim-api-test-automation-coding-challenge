@@ -41,10 +41,23 @@ DELETE https://example.com/api/skus{id}
 
 
 ## About
+### Test Strategy
+The automation housed in this repository focuses on API acceptance testing. In other words, we focus on defining the behaviors expected of this API in isolation. As this is a simplified coding challenge, without context around stakeholders, users, services, and clients, we will assume the most basic use case for this API: to serve as the backend for a simple web app.
+#### Excludes
+- E2E Testing
+- UI Testing
+- Functional Testing
+- Integration Testing
+- Unit Testing
 ### Tech Stack
+For this challenge, the tech stack was chosen for speed in order to quickly deliver proof of concept. Due to difficulties with the Windows environment and the dependency repository, we favored tooling available out of the box as much as possible.
+
+Future considerations may include introducing TypeScript, defining preferred coding conventions such as import and promise handling patterns, formatting hooks for consistency, and more sophisticated, reproducible API mocking with tools like Postman or Mockoon paired with containerization. 
+
 #### App
 - nodejs
 - Express
+- Mongoose
 #### Test
 - mocha
 - chai
