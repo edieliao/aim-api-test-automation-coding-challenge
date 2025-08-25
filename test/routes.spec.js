@@ -1,14 +1,14 @@
 import "dotenv/config";
 import { StatusCodes } from "http-status-codes";
 
-import {expect} from "chai";
+import { expect } from "chai";
 import * as chai from "chai";
-import {default as chaiHttp, request} from "chai-http";
+import { default as chaiHttp, request } from "chai-http";
 
 chai.use(chaiHttp);
 
 describe("SKU API Acceptance Tests", () => {
-    const testSKU = {
+    let testSKU = {
         sku: "berliner",
         description: "Jelly donut",
         price: "2.99"
@@ -16,7 +16,7 @@ describe("SKU API Acceptance Tests", () => {
 
     describe("Create", () => {
         it("should work", async () => {
-            const response = await request.execute(process.env.API_URL)
+            let response = await request.execute(process.env.API_URL)
                 .post("/api/skus")
                 .send(testSKU);
             expect(response).to.have.status((StatusCodes.CREATED));
@@ -25,13 +25,13 @@ describe("SKU API Acceptance Tests", () => {
 
     describe("Read", () => {
         it("should work", async () => {
-            const response = await request.execute(process.env.API_URL)
+            let response = await request.execute(process.env.API_URL)
                 .get("/api/skus");
             expect(response).to.have.status((StatusCodes.OK));
         });
 
         it("should work", async () => {
-            const response = await request.execute(process.env.API_URL)
+            let response = await request.execute(process.env.API_URL)
                 .get("/api/skus/" + testSKU.sku);
             expect(response).to.have.status((StatusCodes.OK));
         });
@@ -39,7 +39,7 @@ describe("SKU API Acceptance Tests", () => {
 
     describe("Update", () => {
         it("should work", async () => {
-            const response = await request.execute(process.env.API_URL)
+            let response = await request.execute(process.env.API_URL)
                 .put("/api/skus/" + testSKU.sku)
                 .send(testSKU);
             expect(response).to.have.status((StatusCodes.NO_CONTENT));
@@ -48,7 +48,7 @@ describe("SKU API Acceptance Tests", () => {
 
     describe("Delete", () => {
         it("should work", async () => {
-            const response = await request.execute(process.env.API_URL)
+            let response = await request.execute(process.env.API_URL)
                 .put("/api/skus/" + testSKU.sku)
                 .send(testSKU);
             expect(response).to.have.status((StatusCodes.NO_CONTENT));
