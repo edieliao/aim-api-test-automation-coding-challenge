@@ -10,3 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - README.md
 - CHANGELOG.md
+- environment vars
+- data models
+- mocked data backed by in-memory Map data structure
