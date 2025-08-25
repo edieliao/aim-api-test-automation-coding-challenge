@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
 const skuSchema = new Schema({
+    id: {
+        type: String,
+        required: true
+    },
     sku: {
         type: String,
         required: true

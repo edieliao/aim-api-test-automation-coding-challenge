@@ -1,9 +1,11 @@
 import { Sku } from "../src/sku.model.js";
 
 import { expect } from "chai";
+import { generateRandomString } from "./utils/testUtils.js";
 
 describe('Test SKU Model', () => {
     const testSkuData = {
+        id: generateRandomString(),
         sku: "berliner",
         description: "Jelly donut",
         price: "2.99"
@@ -16,6 +18,7 @@ describe('Test SKU Model', () => {
             try {
                 let result = await sku.validate();
             } catch (err) {
+                expect(err.errors.id).to.exist;
                 expect(err.errors.sku).to.exist;
                 expect(err.errors.description).to.exist;
                 expect(err.errors.price).to.exist;
@@ -31,6 +34,7 @@ describe('Test SKU Model', () => {
             });
 
             let result = await testSku.validate();
+            expect(testSku.id).to.equal(testSkuData.id);
             expect(testSku.sku).to.equal(testSkuData.sku);
             expect(testSku.description).to.equal(testSkuData.description);
             expect(testSku.price).to.equal(testSkuData.price);
