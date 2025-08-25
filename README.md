@@ -65,11 +65,21 @@ Future considerations may include introducing TypeScript, defining preferred cod
 
 ## Getting Started
 ### Prerequisites
-- nvm
+Use `nvm` to manage your `npm` versioning. 
+- nvm - Mac users may use Homebrew to install `nvm`, Windows users may use `nvm4w` (nvm-windows)
 - npm
-### Install Dependencies
+
+> NOTE: Windows users may encounter some trouble where various environment issues prevent connection to the npm resigtry. The workarounds can leave you with security vulnerabilities. Please ensure you restore any measures taken to bypass blockers and reinstate any firewalls you may have taken down.
+
+### Commands
+Run the below commands in the order presented.
+#### Install Dependencies
 `npm install`
-### Run Tests
+> Windows users may need to delete their `node_modules`folder AND their `package-lock.json` file, turn off any firewalls or antiviruses, and check their PowerShell permissions before running any `npm install` attempts.
+#### Run Mocked Server
+Server should be replaced by a real environment. See `.env`file.
+
+`npm start` - starts the express server hosting the moced CRUD
+
+#### Run Tests - runs the tests with a terminal report
 `npm test`
-### Run Locally
-`npm start`
