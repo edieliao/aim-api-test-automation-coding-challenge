@@ -33,10 +33,10 @@ describe("Read", () => {
         let response = await request.execute(process.env.API_URL)
             .get("/api/skus/" + testSkuId);
         expect(response).to.have.status((StatusCodes.OK));
-        expect(response.body.id).to.equal(testSkuId);
-        expect(response.body.sku).to.equal(testSKU.sku);
-        expect(response.body.description).to.equal(testSKU.description);
-        expect(response.body.price).to.equal(testSKU.price);
+        expect(response.body.id).to.equal(testSkuId, "Failed to preserve id");
+        expect(response.body.sku).to.equal(testSKU.sku, "Failed to preserve SKU");
+        expect(response.body.description).to.equal(testSKU.description, "Failed to preserve description");
+        expect(response.body.price).to.equal(testSKU.price, "Failed to preserve price");
     });
 
     it("should return NOT FOUND SKUs when given an id of an NON existing SKU", async () => {
