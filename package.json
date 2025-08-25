@@ -19,7 +19,8 @@
   "homepage": "https://github.com/edieliao/aim-api-test-automation-coding-challenge#readme",
   "dependencies": {
     "dotenv": "^17.2.1",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "http-status-codes": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.28.3",

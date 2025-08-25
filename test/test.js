@@ -1,4 +1,5 @@
 import "dotenv/config";
+import { StatusCodes } from "http-status-codes";
 
 import {expect} from "chai";
 import * as chai from "chai";
@@ -18,7 +19,8 @@ describe("SKU API Acceptance Tests", () => {
         it("should work", () => {
             api.get("/")
             .end((err, response) => {
-                expect(response).to.have.status(200);
+                console.log(StatusCodes.OK);
+                expect(response).to.have.status(StatusCodes.OK);
             });
         });
     });
